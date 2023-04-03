@@ -1,0 +1,2 @@
+# Google Cloud Functions automatically include Flask for Python runtimes
+art==5.9  # https://pypi.org/project/art/
