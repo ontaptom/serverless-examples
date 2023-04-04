@@ -7,16 +7,17 @@ This serverless application takes an input message and returns its ASCII art rep
 The function listens for an incoming HTTP request and checks for a query parameter named `message`. If the parameter is present, the function generates ASCII art based on the input message. If no message is provided, it defaults to "Hello World!".
 
 The output is wrapped in `<pre>` tags to ensure correct formatting when displayed in a browser.
-Deployment
+
+## Deployment
 
 To deploy this function on Google Cloud Functions, follow these steps:
 
-1. Install the art library and the Google Cloud SDK, if you haven't already.
+1. If you want to test the solution locally - Install the art library and the Google Cloud SDK, if you haven't already.
 
 2. Create a requirements.txt file in the same directory as your main.py file (which contains the hello_world function). Add the following line to the file:
 
 ```
-art
+art==5.9
 ```
 
 You can deploy the function from Console or via gcloud command-line tool:
@@ -34,7 +35,7 @@ You can replace `python310` with the appropriate Python runtime if necessary.
 After deployment, you will receive a URL for your function. Use this URL to access the ASCII art generator. You can append the message query parameter to the URL to generate ASCII art based on your input:
 
 ```
-https://<REGION-PROJECT_ID>.cloudfunctions.net/hello_world?message=example
+https://<REGION-PROJECT_ID>.cloudfunctions.net/hello_ascii?message=example
 ```
 
 For more information on deploying Google Cloud Functions, refer to the official documentation.
