@@ -20,6 +20,10 @@ gcloud functions deploy joke_generator \
 --set-env-vars OPENAI_API_KEY=<your-openai-api-key>
 ```
 
+## OpenAI API Key
+
+This example uses OpenAI API with the GPT-3. You'll need an API KEY to be able to authenticate calls. You can create an account and request for an API Key under [OpenAI API page](https://platform.openai.com/account/api-keys). OpenAI offers free credit at start - check out [OpenAI pricing](https://openai.com/pricing) for details.
+
 ## Usage 
 
 After deployment, you will receive a URL for your function. Use this URL to access the Joke Generator. You can append the topic of a joke in the URL to generate ASCII art based on your input:
